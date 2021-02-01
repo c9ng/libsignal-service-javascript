@@ -522,9 +522,7 @@ class MessageSender {
   }
 
   async updateProfile(profile) {
-    const myNumber = await this.store.getNumber();
-    const myUuid = await this.store.getUuid();
-    return this.server.updateProfile(myUuid || myNumber, profile);
+    return this.server.updateProfile(profile);
   }
 
   getAvatar(path) {

@@ -603,11 +603,10 @@ function initialize({
         accessKey,
       });
     }
-    function updateProfile(identifier, profile) {
+    function updateProfile(profile) {
       return _ajax({
         call: 'profile',
         httpType: 'PUT',
-        //urlParameters: `/${identifier}`,
         responseType: 'json',
         jsonData: profile,
       });
