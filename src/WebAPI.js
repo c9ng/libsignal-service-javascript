@@ -473,6 +473,7 @@ function initialize({
       getMessageSocket,
       getMyKeys,
       getProfile,
+      updateProfile,
       getProfileUnauth,
       getProvisioningSocket,
       getSenderCertificate,
@@ -600,6 +601,15 @@ function initialize({
         responseType: 'json',
         unauthenticated: true,
         accessKey,
+      });
+    }
+    function updateProfile(identifier, profile) {
+      return _ajax({
+        call: 'profile',
+        httpType: 'PUT',
+        urlParameters: `/${identifier}`,
+        responseType: 'json',
+        jsonData: profile,
       });
     }
 
