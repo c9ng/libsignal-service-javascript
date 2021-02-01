@@ -607,7 +607,7 @@ function initialize({
       return _ajax({
         call: 'profile',
         httpType: 'PUT',
-        urlParameters: `/${identifier}`,
+        //urlParameters: `/${identifier}`,
         responseType: 'json',
         jsonData: profile,
       });
