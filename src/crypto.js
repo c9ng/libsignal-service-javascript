@@ -191,6 +191,8 @@ function decryptProfile(data, key) {
             error.message =              'Failed to decrypt profile data. Most likely the profile key has changed.';
             error.name = 'ProfileDecryptError';
             throw error;
+          } else {
+            throw error;
           }
         })
     );
