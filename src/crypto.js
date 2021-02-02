@@ -192,7 +192,7 @@ function decryptProfile(data, key) {
             error.name = 'ProfileDecryptError';
             throw error;
           } else {
-            throw error;
+            throw e;
           }
         })
     );
